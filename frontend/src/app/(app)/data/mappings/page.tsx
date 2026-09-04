@@ -1,11 +1,6 @@
-import { ModulePage } from "@/components/module-page";
+import { MappingPage } from "@/components/data/mapping-page";
 
-export default function FieldMappingPage() {
-  return (
-    <ModulePage
-      eyebrow="Data"
-      title="Field mapping"
-      description="Semantic field mapping will become available after a source is connected and profiled."
-    />
-  );
+export default async function FieldMappingPage({ searchParams }: { searchParams: Promise<{ dataset?: string }> }) {
+  const { dataset } = await searchParams;
+  return <MappingPage initialDatasetId={dataset} />;
 }

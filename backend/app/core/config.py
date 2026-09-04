@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from functools import lru_cache
+from pathlib import Path
 
 from pydantic import Field, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -18,6 +19,8 @@ class Settings(BaseSettings):
     api_v1_prefix: str = "/api/v1"
     frontend_url: str = "http://localhost:3000"
     database_url: str | None = Field(default=None)
+    max_upload_size_mb: int = Field(default=25, ge=1, le=1024)
+    upload_dir: Path = Path("storage/uploads")
 
     @field_validator("database_url", mode="before")
     @classmethod

@@ -11,7 +11,7 @@ sys.path.insert(0, str(ROOT))
 
 from app.core.config import get_settings  # noqa: E402
 from app.core.database import Base  # noqa: E402
-from app.models import Workspace  # noqa: E402, F401
+from app.models import CanonicalField, DataSource, Dataset, DatasetVersion, FieldMapping, FieldProfile, QualityIssue, SourceColumn, Workspace  # noqa: E402, F401
 
 config = context.config
 

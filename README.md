@@ -27,7 +27,7 @@ Roles:
 
 ## Current phase
 
-**Phase 1 — Foundation.** Application shell, landing page, API skeleton, database-ready configuration, and developer documentation. No ingestion, auth, analytics, or AI provider yet.
+**Phase 3 — Semantic business field mapping.** Profiled columns receive deterministic canonical-field suggestions with evidence and product-confidence levels. Users can confirm, override, reject, or leave mappings unmapped. Every mapping remains bound to its source column and dataset version. No method execution, analytics, or AI mapping is included.
 
 ## Stack
 
@@ -120,6 +120,8 @@ DATABASE_URL=postgresql+psycopg://decilyra:decilyra@localhost:5432/decilyra
 FRONTEND_URL=http://localhost:3000
 LOG_LEVEL=INFO
 API_V1_PREFIX=/api/v1
+MAX_UPLOAD_SIZE_MB=25
+UPLOAD_DIR=storage/uploads
 ```
 
 Never commit `.env` files with secrets.
@@ -137,6 +139,12 @@ alembic upgrade head
 ```
 
 Supabase: create a project later, then set `DATABASE_URL` to the SQLAlchemy form of the connection string (`postgresql+psycopg://...`). See `database/README.md`.
+
+## Test the sample CSV
+
+After starting PostgreSQL and applying migrations, start both applications and open [http://localhost:3000/data/sources](http://localhost:3000/data/sources). Drag `samples/demo_sales.csv` into the upload area. Select the created source to inspect its profile, then choose **Open field mapping**. Review the evidence for each suggestion and confirm, change, reject, or leave fields unmapped. The sample intentionally keeps revenue and discount meanings reviewable because profiling cannot prove their accounting definitions.
+
+Uploaded content is written to `backend/storage/uploads` by default. The directory is excluded from Git and storage keys are never returned by the API.
 
 ## Testing
 
@@ -158,7 +166,7 @@ pytest
 
 ## Roadmap
 
-Phases 1–14 are listed in [docs/ROADMAP.md](docs/ROADMAP.md). Next intended slice after this foundation is **Phase 2 — CSV ingestion**.
+Phases 1–14 are listed in [docs/ROADMAP.md](docs/ROADMAP.md). The next intended slice is **Phase 4 — expanded data quality policy and remediation**.
 
 ## Deployment target
 
@@ -166,4 +174,4 @@ Phases 1–14 are listed in [docs/ROADMAP.md](docs/ROADMAP.md). Next intended sl
 - Backend on Render or Railway
 - PostgreSQL via Supabase or the host’s managed Postgres
 
-Production secrets (Supabase URI, AI provider keys, auth) are not required for Phase 1.
+Production secrets (Supabase URI, AI provider keys, auth) are not required for Phase 3.

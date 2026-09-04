@@ -6,15 +6,15 @@ Repository layout, local development, frontend shell, landing page, FastAPI skel
 
 ## Phase 2 — CSV ingestion
 
-Accept a CSV, store a dataset record, and expose a basic preview. No analytics yet.
+**Complete.** Secure CSV upload, replaceable local storage, dataset/version metadata, schema discovery, deterministic column profiles, quality checks, source listing, dataset detail, and bounded preview. No analytics or canonical business mapping.
 
 ## Phase 3 — Semantic mapping
 
-Assign business meaning to columns. Persist mappings per workspace.
+**Complete.** Seed a stable MVP canonical catalog, generate deterministic version-bound suggestions with evidence and product-confidence levels, handle ambiguity, and persist confirmation, override, rejection, and unmapped decisions.
 
 ## Phase 4 — Data quality
 
-Profile completeness, types, and obvious integrity issues. Surface blockers before methods run.
+Extend the foundational Phase 2 checks with workspace-configurable policies, remediation workflows, and mapping-aware blockers before methods run.
 
 ## Phase 5 — Method registry
 

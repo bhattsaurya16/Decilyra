@@ -67,6 +67,9 @@ ehthumbs.db
 
 # Alembic / local
 backend/.mypy_cache/
+backend/storage/uploads/
+backend/test-temp-*/
+backend/test-cache-*/
 
 # Local toolchains (never commit)
 .tools/

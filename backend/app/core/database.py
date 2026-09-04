@@ -62,3 +62,10 @@ async def dispose_engine() -> None:
         await _engine.dispose()
         _engine = None
         _session_factory = None
+
+
+def reset_database_state() -> None:
+    """Reset cached database objects after settings change (primarily tests)."""
+    global _engine, _session_factory
+    _engine = None
+    _session_factory = None

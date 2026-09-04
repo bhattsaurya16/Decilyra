@@ -1,0 +1,17 @@
+order_id,order_date,customer_id,product,category,quantity,unit_price,discount,sales_amount,region
+ORD-1001,2026-01-03,C-201,Analytics Starter,Software,2,149.00,0.00,298.00,North
+ORD-1002,2026-01-04,C-202,Advisory Session,Services,1,225.00,0.10,202.50,West
+ORD-1003,2026-01-05,C-203,Analytics Pro,Software,1,499.00,0.00,499.00,South
+ORD-1004,2026-01-06,C-204,Sensor Kit,Hardware,4,89.50,0.05,340.10,East
+ORD-1005,2026-01-08,C-205,Analytics Starter,Software,3,149.00,,447.00,North
+ORD-1006,2026-01-09,C-201,Training Pack,Services,2,175.00,0.00,350.00,West
+ORD-1007,2026-01-11,C-206,Sensor Kit,Hardware,1,89.50,0.00,89.50,South
+ORD-1008,2026-01-12,C-207,Analytics Pro,Software,2,499.00,0.15,848.30,East
+ORD-1009,2026-01-14,C-208,Support Add-on,Add-ons,1,79.00,0.00,79.00,North
+ORD-1010,2026-01-15,C-209,Analytics Starter,Software,5,149.00,0.05,707.75,West
+ORD-1011,2026-01-18,C-210,Advisory Session,Services,1,225.00,0.00,225.00,South
+ORD-1012,2026-01-19,C-211,Sensor Kit,Hardware,2,89.50,0.00,179.00,East
+ORD-1013,2026-01-21,C-212,Support Add-on,Add-ons,3,79.00,0.10,213.30,North
+ORD-1014,2026-01-22,C-213,Analytics Pro,Software,1,499.00,0.00,499.00,
+ORD-1015,2026-01-24,C-214,Training Pack,Services,2,175.00,0.05,332.50,South
+ORD-1015,2026-01-24,C-214,Training Pack,Services,2,175.00,0.05,332.50,South
