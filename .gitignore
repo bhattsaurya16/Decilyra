@@ -30,7 +30,6 @@ frontend/.next/
 frontend/out/
 frontend/.turbo/
 *.tsbuildinfo
-next-env.d.ts
 
 # Testing / coverage
 coverage/
@@ -68,6 +67,9 @@ ehthumbs.db
 
 # Alembic / local
 backend/.mypy_cache/
+
+# Local toolchains (never commit)
+.tools/
 
 # Misc
 *.pem

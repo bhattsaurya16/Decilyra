@@ -3,7 +3,10 @@ from __future__ import annotations
 import logging
 import sys
 
-from pythonjsonlogger.json import JsonFormatter
+try:
+    from pythonjsonlogger.json import JsonFormatter
+except ImportError:  # python-json-logger < 3.1
+    from pythonjsonlogger.jsonlogger import JsonFormatter
 
 
 def configure_logging(level: str) -> None:
